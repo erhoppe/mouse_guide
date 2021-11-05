@@ -1,3 +1,6 @@
+crosshairs:
+    user.mouse_guide_toggle()
+#
 mouse guide:
     user.mouse_guide_toggle()
 # for example: mouse 10 up 30 right
