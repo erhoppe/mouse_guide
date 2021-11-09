@@ -85,7 +85,8 @@ class MouseGuide:
             self.last_pos = pos
 
 mouse_guide = MouseGuide(500, 500)
-mouse_guide.enable()
+#mouse_guide.enable()
+mouse_guide.disable() ## Make default behavior to start off
 
 mod = Module()
 mod.list('mouse_cardinal', desc='cardinal directions for relative mouse movement')
