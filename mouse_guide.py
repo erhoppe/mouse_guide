@@ -97,8 +97,14 @@ def parse_cardinal(direction: str, distance: int) -> Tuple[bool, int]:
         modifier, direction = direction.split(' ', 1)
         if modifier == 'minor':
             distance *= 5
-        if modifier == 'major':
+        elif modifier == 'major':
             distance *= 25
+        elif modifier == 'teeny':
+            distance *= 1
+        elif modifier == 'huge':
+            distance *= 250
+    else:
+        distance *= 10 ## Make default big instead of teeny
     if direction == 'left':
         return True, x - distance
     elif direction == 'right':
@@ -154,4 +160,6 @@ ctx.lists['user.mouse_cardinal'] = [
     'up', 'left', 'down', 'right',
     'major up', 'major left', 'major down', 'major right',
     'minor up', 'minor left', 'minor down', 'minor right',
-]
+    'teeny up', 'teeny left', 'teeny down', 'teeny right',
+    'huge up', 'huge left', 'huge down', 'huge right',
+]  
